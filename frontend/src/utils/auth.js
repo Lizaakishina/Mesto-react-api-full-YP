@@ -1,4 +1,4 @@
-const BASE_URL = '';
+const BASE_URL = 'https://api.ak1s4.mesto.nomoredomains.icu';
 
 const checkAnswer = (res) => {
   if(res.ok) {
