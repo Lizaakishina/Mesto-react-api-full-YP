@@ -1,6 +1,6 @@
 const allowedCors = [
-  'http://ak1s4.mesto.nomoredomains.icu',
-  'https://ak1s4.mesto.nomoredomains.icu',
+  'http://ak1s4.mesto.nomoredomains.icu/sing-in',
+  'https://ak1s4.mesto.nomoredomains.icu/sing-in',
   'http://localhost:3000',
   'https://localhost:3000',
 ];
