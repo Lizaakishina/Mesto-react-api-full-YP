@@ -27,7 +27,7 @@ export const register = async (email, password) => {
 }
 
 export const authorize = async (email, password) => {
-  const res = await fetch(`${BASE_URL}/sign-in`, {
+  const res = await fetch(`${BASE_URL}/signin`, {
     method: 'POST',
     credentials: 'include',
     headers: {
