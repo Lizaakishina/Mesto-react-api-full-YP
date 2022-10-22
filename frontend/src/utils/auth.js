@@ -15,6 +15,7 @@ export const register = async (email, password) => {
   const res = await fetch(`${BASE_URL}/signup`, {
     method: 'POST',
     credentials: 'include',
+    mode: 'no-cors',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
@@ -30,6 +31,7 @@ export const authorize = async (email, password) => {
   const res = await fetch(`${BASE_URL}/signin`, {
     method: 'POST',
     credentials: 'include',
+    mode: 'no-cors',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
@@ -40,7 +42,7 @@ export const authorize = async (email, password) => {
   return data;
 }
 
-export const getUserData = async (_token) => {
+export const getUserData = async (token) => {
   const res = await fetch(`${BASE_URL}/users/me`, {
     method: 'GET',
     credentials: 'include',
