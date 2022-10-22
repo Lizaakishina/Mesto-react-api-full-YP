@@ -44,6 +44,7 @@ export const getUserData = async (_token) => {
   const res = await fetch(`${BASE_URL}/users/me`, {
     method: 'GET',
     credentials: 'include',
+    mode: 'no-cors',
     headers: {
       "Content-Type": "application/json"
     }
