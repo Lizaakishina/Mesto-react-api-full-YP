@@ -13,7 +13,7 @@ const {
 const { NODE_ENV, JWT_SECRET_KEY } = process.env;
 
 module.exports.login = (req, res, next) => {
-  console.log(NODE_ENV);
+  // console.log(NODE_ENV);
   const { email, password } = req.body;
   Users.findUserByCredentials(email, password)
     .then((user) => {
@@ -86,7 +86,7 @@ module.exports.createUser = (req, res, next) => {
 
 module.exports.updateUser = (req, res, next) => {
   const { name, about } = req.body;
-  console.dir(req.body);
+  // console.dir(req.body);
   Users.findByIdAndUpdate(
     req.user._id,
     { name, about },
@@ -97,7 +97,7 @@ module.exports.updateUser = (req, res, next) => {
     },
   ).orFail(new NotFoundError(NOT_FOUND_USER_ID_MESSAGE))
     .then((user) => {
-      console.dir(user);
+      // console.dir(user);
       res.send(user);
     })
     .catch((err) => {
